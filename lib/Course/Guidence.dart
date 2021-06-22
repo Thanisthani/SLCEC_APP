@@ -182,7 +182,7 @@ class _GuidenceState extends State<Guidence> {
                               height: 10.0,
                             ),
                             Text(
-                              " Connect Adviser",
+                              " Connect to a Adviser",
                               style: GoogleFonts.laila(
                                   textStyle: TextStyle(
                                       fontSize: 25.0,
@@ -264,7 +264,7 @@ class _GuidenceState extends State<Guidence> {
                               height: 10.0,
                             ),
                             Text(
-                              " Connect a Mentor",
+                              " Connect to a Mentor",
                               style: GoogleFonts.laila(
                                   textStyle: TextStyle(
                                       fontSize: 25.0,

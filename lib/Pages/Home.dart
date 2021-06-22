@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sleceapp/Course/SLAS.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:sleceapp/Drawer/Feedback.dart';
 import 'package:sleceapp/Pages/Learn.dart';
+import 'package:sleceapp/login/Login.dart';
 
 class Home extends StatefulWidget {
   // Home({Key? key}) : super(key: key);
@@ -170,64 +172,6 @@ class _HomeState extends State<Home> {
                         ),
                         SizedBox(
                           width: 15.0,
-                        ), //image
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Slas()));
-                          },
-                          child: Container(
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                image: DecorationImage(
-                                  image: AssetImage("images/pf2.jpg"),
-                                  fit: BoxFit.cover,
-                                ),
-
-                                /* border: Border.all(
-                                  width: 3, color: Colors.amberAccent),*/
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20.0))),
-                            height: 200,
-                            // padding: EdgeInsets.all(15.0),
-                            width: 160,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 160.0,
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.black38,
-                                      // border:
-                                      //Border.all(width: 1, color: Colors.black12),
-                                      borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(20.0),
-                                        bottomRight: Radius.circular(20.0),
-                                      )),
-                                  height: 40.0,
-                                  width: 160,
-                                  padding: EdgeInsets.all(5.0),
-                                  child: Center(
-                                    child: Text(
-                                      "SLAS",
-                                      style: GoogleFonts.laila(
-                                          textStyle: TextStyle(
-                                              fontSize: 23.0,
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold)),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ), //image
-                        SizedBox(
-                          width: 15.0,
                         ),
                         GestureDetector(
                           onTap: () {
@@ -283,7 +227,66 @@ class _HomeState extends State<Home> {
                               ],
                             ),
                           ),
+                        ), //image//image
+                        SizedBox(
+                          width: 15.0,
                         ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Slas()));
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                image: DecorationImage(
+                                  image: AssetImage("images/pf2.jpg"),
+                                  fit: BoxFit.cover,
+                                ),
+
+                                /* border: Border.all(
+                                  width: 3, color: Colors.amberAccent),*/
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0))),
+                            height: 200,
+                            // padding: EdgeInsets.all(15.0),
+                            width: 160,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 160.0,
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.black38,
+                                      // border:
+                                      //Border.all(width: 1, color: Colors.black12),
+                                      borderRadius: BorderRadius.only(
+                                        bottomLeft: Radius.circular(20.0),
+                                        bottomRight: Radius.circular(20.0),
+                                      )),
+                                  height: 40.0,
+                                  width: 160,
+                                  padding: EdgeInsets.all(5.0),
+                                  child: Center(
+                                    child: Text(
+                                      "SLAS",
+                                      style: GoogleFonts.laila(
+                                          textStyle: TextStyle(
+                                              fontSize: 23.0,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold)),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+
                         SizedBox(
                           width: 15.0,
                         ), //image
@@ -327,6 +330,12 @@ class _HomeState extends State<Home> {
               leading: Icon(
                 Icons.chat_bubble_outline,
               ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Feed()),
+                );
+              },
             ),
             Divider(
               height: 0.1,
@@ -335,6 +344,12 @@ class _HomeState extends State<Home> {
             ListTile(
               title: Text("FAQ"),
               leading: Icon(Icons.info_outline),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Feed()),
+                );
+              },
             ),
             Divider(
               height: 0.1,
@@ -343,6 +358,12 @@ class _HomeState extends State<Home> {
             ListTile(
               title: Text("Log Out"),
               leading: Icon(Icons.phonelink_erase),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Login()),
+                );
+              },
             ),
             Divider(
               height: 0.1,

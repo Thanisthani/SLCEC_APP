@@ -32,6 +32,7 @@ class _NavState extends State<Nav> {
         physics: NeverScrollableScrollPhysics(),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Color(0xFF045c84),
         unselectedItemColor: Colors.black38,
