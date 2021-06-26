@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sleceapp/Course/SLAS.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:sleceapp/Drawer/Faq.dart';
 import 'package:sleceapp/Drawer/Feedback.dart';
+import 'package:sleceapp/Drawer/Profile.dart';
 import 'package:sleceapp/Pages/Learn.dart';
 import 'package:sleceapp/login/Login.dart';
 
@@ -42,7 +44,7 @@ class _HomeState extends State<Home> {
         ],
         centerTitle: true,
         title: Text(
-          "SLECE",
+          "SLCEC",
           style: GoogleFonts.laila(
               textStyle: TextStyle(
                   fontSize: 23.0,
@@ -320,6 +322,12 @@ class _HomeState extends State<Home> {
             ListTile(
               title: Text("Profile"),
               leading: Icon(Icons.perm_identity),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Profile()),
+                );
+              },
             ),
             Divider(
               height: 0.1,
@@ -347,7 +355,7 @@ class _HomeState extends State<Home> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Feed()),
+                  MaterialPageRoute(builder: (context) => Faq()),
                 );
               },
             ),
